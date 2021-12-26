@@ -1,6 +1,8 @@
 # documention
 php class for f1r.ir ( shourt link )
 
+# **Usage**
+
 # get starteed
 one- include class:
 
