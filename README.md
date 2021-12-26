@@ -3,6 +3,7 @@ php class for f1r.ir ( shourt link )
 
 # get starteed
 one- include class:
+
 اول : کلاس رو به پروزه اضافه میکنیم
 ```php
 <?php 
@@ -10,6 +11,7 @@ include_once 'class-f1r.php';
 
 ```
 Now we need to create an object from the class
+
 حالا یک شیء از کلاس ایجاد می کنیم : 
 ```php
 <?php 
@@ -24,10 +26,12 @@ include_once 'class-f1r.php';
 use F1r_php as shourtlink;
 ```
 Now you can write the rest of your code
+
 حالا می توانید بقیه کد خود را بنویسید
 
 # get view
 You can do this to get the information of a shortened link
+
 برای دریافت اطلاعات یک لینک کوتاه شده می توانید این کار را انجام دهید
 
 ```php
