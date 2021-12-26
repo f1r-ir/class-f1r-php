@@ -1,9 +1,9 @@
-# documention
+# Documention
 php class for f1r.ir ( shourt link )
 
-# **Usage**
+**version 1.0**
 
-# get starteed
+# Get Started
 one- include class:
 
 اول : کلاس رو به پروزه اضافه میکنیم
@@ -31,7 +31,7 @@ Now you can write the rest of your code
 
 حالا می توانید بقیه کد خود را بنویسید
 
-# get view
+# Get View
 You can do this to get the information of a shortened link
 
 برای دریافت اطلاعات یک لینک کوتاه شده می توانید این کار را انجام دهید
@@ -42,7 +42,7 @@ include_once 'class-f1r.php';
 use F1r_php as shourtlink;
 print_r(shourtlink::getview("$name"));
 ```
-# how to create new link
+# How To Create New Link
 You can use this to create a new shortened link
 
 می توانید از این برای ایجاد یک پیوند کوتاه شده جدید استفاده کنید
