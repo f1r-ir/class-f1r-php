@@ -1,5 +1,5 @@
 <?php
-class PreBot{
+class F1r_php{
     public static function error_log( $status = "false" , $message , $he = null ){
         $time = "[ ".date("c")." ]";
         if (!isset($message) or empty($message) or $message == null){
