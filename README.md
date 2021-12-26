@@ -42,6 +42,7 @@ print_r(shourtlink::getview("$name"));
 ```
 # how to create new link
 You can use this to create a new shortened link
+
 می توانید از این برای ایجاد یک پیوند کوتاه شده جدید استفاده کنید
 
 ```php 
