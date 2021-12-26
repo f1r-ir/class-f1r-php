@@ -9,20 +9,20 @@ class F1r_php{
             self::error_log("true","not short description is error log","PreBot_ERROR_LOG [500]");
         }
         if ($status === "false"){
-            if (file_exists("PreBot.log")){
-                $file = fopen("PreBot.log","a");
+            if (file_exists("F1r_php.log")){
+                $file = fopen("F1r_php.log","a");
                 fwrite($file,"$he $message $time".PHP_EOL);
                 fclose($file);
             } else {
-                file_put_contents("PreBot.log","$he $message $time".PHP_EOL);
+                file_put_contents("F1r_php.log","$he $message $time".PHP_EOL);
             }
         } else if ($status === "true"){
-            if (file_exists("PreBot.log")){
-                $file = fopen("PreBot.log","a");
+            if (file_exists("F1r_php.log")){
+                $file = fopen("F1r_php.log","a");
                 fwrite($file,"$he $message $time ".PHP_EOL);
                 fclose($file);
             } else {
-                file_put_contents("PreBot.log","$he $message $time ".PHP_EOL);
+                file_put_contents("F1r_php.log","$he $message $time ".PHP_EOL);
             }
             die("oops!! please reload this page Error : $he");
         } else {
