@@ -3,10 +3,10 @@ class F1r_php{
     public static function error_log( $status = "false" , $message , $he = null ){
         $time = "[ ".date("c")." ]";
         if (!isset($message) or empty($message) or $message == null){
-            self::error_log("true","not description is error log","PreBot_ERROR_LOG [500]");
+            self::error_log("true","not description is error log","PreClass_ERROR_LOG [500]");
         }
         if (!isset($he) or empty($he) or $he == null){
-            self::error_log("true","not short description is error log","PreBot_ERROR_LOG [500]");
+            self::error_log("true","not short description is error log","PreClass_ERROR_LOG [500]");
         }
         if ($status === "false"){
             if (file_exists("F1r_php.log")){
@@ -26,11 +26,11 @@ class F1r_php{
             }
             die("oops!! please reload this page Error : $he");
         } else {
-            self::error_log("true","please check document Class","PreBot_ERROR_LOG [500]");
+            self::error_log("true","please check document Class","PreClass_ERROR_LOG [500]");
         }
     }
-    public static function creat_link($link,$name = "rand"){
-        $shourt =  json_decode(file_get_contents("https://f1r.ir/api/v1/?url=$link&name=$name"));
+    public static function creat_link($link,$name = "rand",$token){
+        $shourt =  json_decode(file_get_contents("https://f1r.ir/api/v2/?url=$link&name=$name&token=$token"));
         if (isset($shourt->description)){
             if ($shourt->description == "successful"){
                 $array = [
@@ -42,6 +42,9 @@ class F1r_php{
             } else if ($shourt->description == "error in server"){
                 self::error_log("false","not found link","CLASS_CREAT_LINK [666]");
                 return "error";
+            } else if ($shourt->description == "error : token is worng"){
+                self::error_log("false","token not found","CLASS_CREAT_LINK [666]");
+                return "token not found";
             } else {
                 self::error_log("false","not found description","CLASS_CREAT_LINK [666]");
                 return "opes!!";
@@ -53,7 +56,7 @@ class F1r_php{
             
         }
         public static function getview($name = null){
-            $check = json_decode(file_get_contents("https://f1r.ir/api/v1/status/?name=$name"));
+            $check = json_decode(file_get_contents("https://f1r.ir/api/v2/status/?name=$name"));
             if (isset($check->description)){
                 return 'notfound link';
             } else {
