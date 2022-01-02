@@ -59,7 +59,8 @@ include_once 'class-f1r.php';
 use F1r_php as shourtlink;
 $url = @$_GET['url'];
 $name = @$_GET['name'];
-print_r(shourtlink::creat_link($url,$name));
+$token = @$_GET['token'];
+print_r(shourtlink::creat_link($url,$name,$token));
 ```
 # Version History
 
@@ -70,5 +71,14 @@ version : **1.0**
 **Description :**
 
 The first version of the link shortener class for the f1r site in php
+
+**The second version :**
+
+version : **2.0**
+
+**Description :**
+
+Web services changed. To use, you need to receive your token from your panel.
+panel : f1r.ir/panel
 
 # The End
