@@ -7,7 +7,7 @@ source : in **src/class-f1r.php**
 
 سورس : در **src/class-f1r.php**
 
-**version 1.0**
+**version 2.0**
 
 # Get Started
 one- include class:
